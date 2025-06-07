@@ -21,8 +21,4 @@ if 'resto_rating' in df.columns:
 else:
     st.warning("Kolom 'resto_rating' tidak ditemukan dalam dataset.")
 
-st.subheader("Heatmap Korelasi")
-numeric_cols = df.select_dtypes(include='number')
-plt.figure(figsize=(10, 6))
-sns.heatmap(numeric_cols.corr(), annot=True, cmap='coolwarm')
-st.pyplot(plt)
+
