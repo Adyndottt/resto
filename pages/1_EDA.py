@@ -9,7 +9,7 @@ st.title("📊 Exploratory Data Analysis (EDA)")
 df = pd.read_csv("data/semarang_resto_dataset.csv")
 
 st.subheader("Preview Data")
-st.dataframe(df.head())
+st.dataframe(df)
 
 st.subheader("Informasi Dataset")
 st.write(df.describe())
