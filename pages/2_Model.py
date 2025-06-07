@@ -6,6 +6,7 @@ from sklearn.metrics import classification_report, confusion_matrix
 import joblib
 import seaborn as sns
 import matplotlib.pyplot as plt
+from sklearn.ensemble import RandomForestRegressor
 
 st.title("🤖 Model Pelatihan")
 
@@ -24,7 +25,7 @@ y = df['resto_rating']
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
 # Model training
-model = RandomForestClassifier()
+model = RandomForestRegressor()
 model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 
