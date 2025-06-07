@@ -14,12 +14,12 @@ df = pd.read_csv("data/semarang_resto_dataset.csv")
 
 # Preprocessing
 df = df.dropna()
-if 'kategori' not in df.columns:
-    st.error("Kolom 'kategori' tidak ditemukan.")
+if 'resto_rating' not in df.columns:
+    st.error("Kolom 'resto_rating' tidak ditemukan.")
     st.stop()
 
-X = df.drop('kategori', axis=1).select_dtypes(include='number')
-y = df['kategori']
+X = df.drop('resto_rating', axis=1).select_dtypes(include='number')
+y = df['resto_rating']
 
 X_train, X_test, y_train, y_test = train_test_split(X, y, test_size=0.2, random_state=42)
 
